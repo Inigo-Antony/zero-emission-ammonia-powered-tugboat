@@ -37,8 +37,8 @@ This project presents the design of a **1 MW zero-emission tugboat propulsion sy
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/ammonia-tugboat-fc.git
-cd ammonia-tugboat-fc
+git clone https://github.com/Inigo-Antony/zero-emission-ammonia-powered-tugboat.git
+cd zero-emission-ammonia-powered-tugboat
 
 # Run the calculator (no dependencies required)
 python src/tugboat_calculator.py
@@ -120,28 +120,28 @@ python src/tugboat_calculator.py
 ## Project Structure
 
 ```
-ammonia-tugboat-fc/
+zero-emission-ammonia-powered-tugboat/
 ├── README.md
 ├── LICENSE
 ├── requirements.txt
 ├── src/
 │   ├── __init__.py
 │   └── tugboat_calculator.py
-├── docs/
+├── design/
 │   └── design_methodology.md
+│   └── assumptions.md
 ├── diagrams/
 │   └── system_block_diagram.png
 ├── results/
 │   └── sample_output.txt
-└── report/
-    └── IHFC_coursework_final.pdf
+└── design-report/
+    └── Zero-Emission-Ammonia_Tugboat-Power-System-Design.pdf
 ```
 
 ## References
 
 1. Eluwah, C. & Fennell, P.S. (2024). Hybrid Air-Volt Ammonia Cracker (HAVAC) process. *Energy Advances*, 3(10), 2627-2647.
 2. Amogy (2024). NH₃ Kraken Tugboat Demonstration.
-3. Steinberger, M. et al. (2018). Anode recirculation and purge strategies. *Applied Energy*, 232, 572-582.
 
 ## License
 
