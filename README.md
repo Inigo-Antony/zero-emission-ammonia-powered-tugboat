@@ -12,7 +12,6 @@ A thermodynamic and economic analysis tool for designing zero-emission ammonia-p
 This project presents the design of a **1 MW zero-emission tugboat propulsion system** using ammonia as a hydrogen carrier. The system converts liquid ammonia to electrical power through on-board cracking and PEM fuel cells, achieving true zero-emission operation suitable for harbour environments.
 
 The propulsion system employs a series hybrid architecture where ammonia serves as the primary energy carrier. Liquid ammonia is vaporised, thermally cracked to hydrogen and nitrogen, purified to fuel cell grade, and converted to electricity in PEM fuel cells. A lithium iron phosphate battery provides peak shaving, cold start capability, and regenerative braking energy storage.
-Figure 2: Schematic of the HAVAC system.
 
 The system is designed around autothermal operation, where waste hydrogen streams (PSA tail gas and fuel cell anode purge) are combusted to provide cracking heat. This approach eliminates the huge electrical load associated with electric heating (electric mode of HAVAC) and avoids using NH3 combustion that produces NOx emissions. The result is a near-zero emissions system achieved through catalytic hydrogen combustion. The startup is facilitated by the battery through resistive heating, which partially converts the ammonia to hydrogen, followed by ramping up to full autothermal conversion.
 
