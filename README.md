@@ -38,6 +38,8 @@ The system is designed around autothermal operation, where waste hydrogen stream
 | Tank capacity | ~13 tonnes | 12h + 15% margin |
 | Local emissions | Zero | CO₂, SOx, PM |
 
+*Detailed specifications are discussed in the design report*
+
 ## Installation
 
 ```bash
