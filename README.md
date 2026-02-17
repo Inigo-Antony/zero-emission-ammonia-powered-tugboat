@@ -11,6 +11,11 @@ A thermodynamic and economic analysis tool for designing zero-emission ammonia-p
 
 This project presents the design of a **1 MW zero-emission tugboat propulsion system** using ammonia as a hydrogen carrier. The system converts liquid ammonia to electrical power through on-board cracking and PEM fuel cells, achieving true zero-emission operation suitable for harbour environments.
 
+The propulsion system employs a series hybrid architecture where ammonia serves as the primary energy carrier. Liquid ammonia is vaporised, thermally cracked to hydrogen and nitrogen, purified to fuel cell grade, and converted to electricity in PEM fuel cells. A lithium iron phosphate battery provides peak shaving, cold start capability, and regenerative braking energy storage.
+Figure 2: Schematic of the HAVAC system.
+
+The system is designed around autothermal operation, where waste hydrogen streams (PSA tail gas and fuel cell anode purge) are combusted to provide cracking heat. This approach eliminates the huge electrical load associated with electric heating (electric mode of HAVAC) and avoids using NH3 combustion that produces NOx emissions. The result is a near-zero emissions system achieved through catalytic hydrogen combustion. The startup is facilitated by the battery through resistive heating, which partially converts the ammonia to hydrogen, followed by ramping up to full autothermal conversion.
+
 ### Key Features
 
 - **Autothermal Operation**: Waste hydrogen from PSA tail gas and anode purge provides cracking heat
@@ -44,61 +49,13 @@ cd zero-emission-ammonia-powered-tugboat
 python src/tugboat_calculator.py
 ```
 
-## Results Summary
-
-### Power Chain (Table 2)
-
-| Component | Efficiency | Output (kW) | Input (kW) |
-|-----------|------------|-------------|------------|
-| Propeller shaft | — | 1,000 | — |
-| Electric motor | 98% | 1,000 | 1,020 |
-| Inverter | 95% | 1,020 | 1,074 |
-| Battery (+50 kW) | — | 1,074 | 1,124 |
-| DC/DC converter | 97% | 1,124 | 1,160 |
-| Balance of Plant (30%) | — | — | +500 |
-| **FC gross output** | — | — | **1,660** |
-
-### Hydrogen Mass Balance (Tables 3, 4)
-
-| Parameter | Value |
-|-----------|-------|
-| Fresh H₂ feed (from PSA) | 117.2 kg/h |
-| Recycled H₂ (from anode) | 12.3 kg/h |
-| H₂ at anode inlet (λ=1.3) | 129.5 kg/h |
-| H₂ consumed (reaction) | 99.6 kg/h |
-| Anode exhaust | 29.9 kg/h |
-| Continuous purge to burner | 17.5 kg/h |
-
-### Autothermal Heat Balance (Table 5)
-
-| Parameter | Value |
-|-----------|-------|
-| H₂ to combustor (PSA tail + anode purge) | 56.5 kg/h |
-| Combustion energy (LHV) | 1,883 kW |
-| Heat available (90% burner efficiency) | 1,695 kW |
-| Cracker heat requirement (reaction) | 668 kW |
-| Heat losses (~10%) | 67 kW |
-| **Surplus heat** | **960 kW** |
-
-### Energy Balance (Table 6)
-
-| Energy Stream | Power (kW) | Percentage |
-|--------------|------------|------------|
-| **Input: NH₃ (LHV)** | **4,600** | **100%** |
-| Propulsion + Battery | 1,050 | 22.8% |
-| FC Waste Heat | 1,660 | 36.1% |
-| Combustor Excess Heat | 983 | 21.4% |
-| Electronics Losses | 88 | 1.9% |
-| Exhaust and Other | 819 | 17.8% |
-| **Total Output** | **4,600** | **100%** |
-
-### System Efficiency (Section 3.9)
+### System Efficiency
 
 ```
 η_system = P_useful / E_input = 1,050 / 4,600 = 22.8% ≈ 23%
 ```
 
-### Economic Comparison (Table 7)
+### Economic Comparison 
 
 | Cost Component | Green NH₃ | Diesel Baseline |
 |----------------|-----------|-----------------|
@@ -108,7 +65,7 @@ python src/tugboat_calculator.py
 | **Total OPEX** | **$2,640,000** | **$813,000** |
 | **Premium** | **3.25×** | baseline |
 
-### Lifecycle Emissions (Table 8)
+### Lifecycle Emissions 
 
 | Fuel Pathway | CO₂ (t/yr) | vs Diesel |
 |--------------|------------|-----------|
