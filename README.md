@@ -143,15 +143,12 @@ ammonia-tugboat-fc/
 2. Amogy (2024). NH₃ Kraken Tugboat Demonstration.
 3. Steinberger, M. et al. (2018). Anode recirculation and purge strategies. *Applied Energy*, 232, 572-582.
 
-## Course Context
-
-Module 41283: Introduction to Hydrogen and Fuel Cell Technologies  
-University of Birmingham / IIT Madras (2025-2026)
-
 ## License
 
 MIT License - see [LICENSE](LICENSE)
 
 ## Author
 
-**Inigo** - MSc Sustainable Energy Systems
+**Inigo** - MSc Sustainable Energy Systems, University of Birmingham and IIT Madras
+
+*Originally developed as part of MSc coursework and further refined independently*
