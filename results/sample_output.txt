@@ -1,0 +1,98 @@
+
+================================================================================
+AMMONIA-HYDROGEN FUEL CELL TUGBOAT - DESIGN RESULTS
+Module 41283 - Introduction to Hydrogen and Fuel Cells
+================================================================================
+
+=============================SYSTEM SPECIFICATIONS==============================
+  Net propulsion power:  1,000 kW (1 MW)
+  Operational endurance: 12 hours
+  Fuel:                  Green ammonia
+  Cracker mode:          Autothermal (GHC + HAVAC)
+
+=====================TABLE 2: POWER REQUIREMENT CALCULATION=====================
+  Component                      Efficiency   Output (kW)  Input (kW)  
+  ------------------------------------------------------------------
+  Propeller shaft (target)       -            1,000        -           
+  Electric motor                 98%          1,000        1,020       
+  Inverter                       95%          1,020        1,074       
+  Battery (+50 kW)               -            1,074        1,124       
+  DC/DC converter                97%          1,124        1,160       
+  Balance of Plant (30%)         -            -            +500        
+  FC gross output required       -            -            1,660       
+
+  FC capacity: 10 × 200 kW = 2,000 kW (83% utilisation)
+
+=======================TABLE 3: PROCESS FLOW CALCULATIONS=======================
+  Stream                    Flow (kg/h)  H₂         N₂         NH₃       
+  -------------------------------------------------------------------
+  NH₃ Feed                  890          -          -          890       
+  Cracker Outlet            890          156.2      729.4      4.4       
+  PSA H₂ Product            117.2        117.2      trace      -         
+  PSA Tail Gas              768.4        39.0       729.4      -         
+  FC Anode Inlet            129.5        129.5      trace      -         
+  Anode Purge               17.5         17.5       trace      -         
+  To Combustor (total)      56.5         56.5       -          -         
+
+===================TABLE 4: ANODE RECIRCULATION MASS BALANCE====================
+  Fresh H₂ feed (from PSA):    117.2 kg/h
+  Recycled H₂ (from anode):    12.3 kg/h
+  H₂ at anode inlet (λ=1.3):   129.5 kg/h
+  H₂ consumed (reaction):      99.6 kg/h
+  Anode exhaust:               29.9 kg/h
+  Continuous purge to burner:  17.5 kg/h
+
+=====================TABLE 5: AUTOTHERMAL HEAT REQUIREMENT======================
+  H₂ to combustor (PSA tail + anode purge):  56.5 kg/h
+  Combustion energy (LHV):                   1,883 kW
+  Heat available (90% burner efficiency):    1,695 kW
+  Cracker heat requirement (reaction):       668 kW
+  Heat losses (~10%):                        67 kW
+  Surplus heat:                              960 kW
+
+============================TABLE 6: ENERGY BALANCE=============================
+  Energy Stream                       Power (kW)      Percentage     
+  -----------------------------------------------------------------
+  Input: NH₃ (LHV)                    4,600 kW       100%           
+  Propulsion + Battery                1,050 kW       22.8%          
+  FC Waste Heat                       1,660 kW       36.1%          
+  Combustor Excess Heat               983 kW        21.4%          
+  Electronics Losses                  88 kW         1.9%           
+  Exhaust and Other                   819 kW        17.8%          
+  Total Output                        4,600 kW       100%           
+
+=========================SECTION 3.9: SYSTEM EFFICIENCY=========================
+  η_system = P_useful / E_input
+  η_system = (P_propulsion + P_battery) / (ṁ_NH₃ × LHV_NH₃)
+  η_system = 1,050 / 4,600 = 0.228 = 22.8% ≈ 23%
+
+=====================TABLE 7: OPEX CALCULATIONS (CORRECTED)=====================
+  Cost Component                 Green NH₃            Diesel Baseline     
+  ----------------------------------------------------------------------
+  Fuel cost                      $2,400,000           $528,000            
+  Carbon cost ($100/t CO₂)       $0                   $211,000            
+  Other costs (10%)              $240,000             $74,000             
+  Total annual OPEX              $2,640,000           $813,000            
+
+  Premium vs diesel: 3.25×
+
+====================TABLE 8: LIFECYCLE EMISSION CALCULATIONS====================
+  Fuel Pathway              CO₂ (t/yr)      vs Diesel       Carbon Cost    
+  ----------------------------------------------------------------------
+  Diesel (baseline)         2,110         -               $211,000       
+  Grey NH₃ (@1.9 CO₂/t)     5,070         +141%           $507,000       
+  Blue NH₃ (@0.2 CO₂/t)     534           -75%            $53,400        
+  Green NH₃                 0             -100%           $0             
+
+====================================SUMMARY=====================================
+  • NH₃ consumption:     890 kg/h
+  • FC gross output:     1,660 kW (10 × 200 kW at 83% utilisation)
+  • Net propulsion:      1,000 kW
+  • System efficiency:   23% (LHV basis)
+  • Tank capacity:       ~13 tonnes (12h + 15% margin)
+  • Autothermal margin:  2.3× (960 kW surplus)
+  • Annual OPEX:         $2.64M (3.25× diesel)
+  • Lifecycle CO₂:       0 tonnes/year (green ammonia)
+
+================================================================================
+
