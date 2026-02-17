@@ -151,4 +151,8 @@ MIT License - see [LICENSE](LICENSE)
 
 **Inigo** - MSc Sustainable Energy Systems, University of Birmingham and IIT Madras
 
+## Comments
+
+This study represents a first-principles thermodynamic and techno-economic model. Real-world deployment would involve additional efficiency penalties, dynamic load behaviour, degradation effects, and significant CAPEX considerations — all critical factors for commercial viability. Developments in tank types (Compressed NH3), other parasitic loads, downtime calculations can be made to improve the project. 
+
 *Originally developed as part of MSc coursework and further refined independently*
